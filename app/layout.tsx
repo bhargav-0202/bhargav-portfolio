@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Bhargav | Data Engineer",
+  icons: {
+    icon: "/favicon.png",
+  },
   description:
     "I build scalable data platforms, analytics solutions, and automated data workflows. Explore my projects, skills, and experience.",
   keywords: [
