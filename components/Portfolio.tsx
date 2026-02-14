@@ -8,6 +8,7 @@ import SkillsSection from "@/components/SkillsSection";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/projects";
 
+
 const sectionClass =
   "border border-white/10 bg-white/5 rounded-xl backdrop-blur-sm";
 const headingClass = "text-2xl font-semibold text-white mb-4";
@@ -140,7 +141,7 @@ export default function Portfolio() {
 
 
 
-        {/* Contact */}
+            {/* Contact */}
         <section
         id="contact"
         className="max-w-3xl mx-auto px-6 scroll-mt-24"
@@ -152,7 +153,7 @@ export default function Portfolio() {
             </h2>
 
             <p className="text-gray-400 mt-4">
-            Get in touch or shoot me an email directly on{" "}
+            Get in touch or shoot me an email directly at{" "}
             <a
                 href="mailto:bhargavxm0214@gmail.com"
                 className="text-white font-medium hover:text-cyan-400 transition-colors"
@@ -164,7 +165,32 @@ export default function Portfolio() {
 
         {/* Form Card */}
         <div className="border border-white/10 bg-white/5 rounded-2xl p-8 backdrop-blur-sm">
-            <form className="space-y-6">
+            <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            className="space-y-6"
+            >
+            {/* Web3Forms Access Key */}
+            <input
+                type="hidden"
+                name="access_key"
+                value="b5d049a7-c934-40e7-a864-90395d643562"
+            />
+
+            {/* Optional: Email subject */}
+            <input
+                type="hidden"
+                name="subject"
+                value="New message from portfolio"
+            />
+
+            {/* Optional: Redirect after submit */}
+            <input
+                type="hidden"
+                name="redirect"
+                value="https://bhargav-portfolio.vercel.app/thank-you"
+            />
+
             {/* Name */}
             <div>
                 <label className="block text-sm text-gray-300 mb-2">
@@ -172,6 +198,8 @@ export default function Portfolio() {
                 </label>
                 <input
                 type="text"
+                name="name"
+                required
                 placeholder="Your name"
                 className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3
                             text-white placeholder-gray-500
@@ -187,6 +215,8 @@ export default function Portfolio() {
                 </label>
                 <input
                 type="email"
+                name="email"
+                required
                 placeholder="your@email.com"
                 className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3
                             text-white placeholder-gray-500
@@ -201,6 +231,8 @@ export default function Portfolio() {
                 Message
                 </label>
                 <textarea
+                name="message"
+                required
                 rows={5}
                 placeholder="Your message..."
                 className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3
@@ -212,8 +244,8 @@ export default function Portfolio() {
 
             {/* Submit Button */}
             <button
-            type="submit"
-            className="
+                type="submit"
+                className="
                 group w-full flex items-center justify-center gap-3
                 rounded-full bg-cyan-400 text-black
                 py-4 px-8 font-semibold text-lg
@@ -221,18 +253,17 @@ export default function Portfolio() {
                 hover:bg-cyan-300
                 hover:shadow-[0_0_30px_rgba(34,211,238,0.65)]
                 focus:outline-none
-            "
+                "
             >
-            <Image
+                <Image
                 src="/send-icon.png"
-                alt=""
+                alt="Send message"
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain transition-transform duration-300 group-hover:-translate-y-0.5"
-            />
-            <span>Send Message</span>
+                />
+                <span>Send Message</span>
             </button>
-
             </form>
         </div>
         </section>
