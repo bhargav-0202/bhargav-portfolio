@@ -13,16 +13,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Bhargav Chelmela | Data Engineer",
+  title: "Bhargav | Data Engineer",
   description:
-    "Portfolio of Bhargav Chelmela — Data Engineer specializing in cloud data platforms, analytics, and scalable data systems.",
+    "I build scalable data platforms, analytics solutions, and automated data workflows. Explore my projects, skills, and experience.",
+  keywords: [
+    "Data Engineer",
+    "Next.js Portfolio",
+    "Cloud Data Engineering",
+    "AWS",
+    "Azure",
+    "GCP",
+  ],
   openGraph: {
-    title: "Bhargav Chelmela | Data Engineer",
+    title: "Bhargav | Data Engineer",
     description:
-      "Portfolio of Bhargav Chelmela — Data Engineer specializing in cloud data platforms, analytics, and scalable data systems.",
+      "Explore the portfolio of Bhargav Chelmela, Data Engineer specializing in cloud data engineering and analytics.",
+    url: "https:///bhargav-portfolio.vercel.app",
+    siteName: "Sai Bhargav Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bhargav | Data Engineer",
+    description:
+      "Data Engineer portfolio showcasing skills, projects, and experience.",
   },
 };
-
 
 export default function RootLayout({
   children,
