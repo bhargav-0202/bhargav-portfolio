@@ -14,9 +14,6 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Bhargav | Data Engineer",
-  icons: {
-    icon: "/favicon.png",
-  },
   description:
     "I build scalable data platforms, analytics solutions, and automated data workflows. Explore my projects, skills, and experience.",
   keywords: [
@@ -30,7 +27,7 @@ export const metadata = {
   openGraph: {
     title: "Bhargav | Data Engineer",
     description:
-      "Explore the portfolio of Bhargav Chelmela, Data Engineer specializing in cloud data engineering and analytics.",
+      "Explore the portfolio of Bhargav, Data Engineer specializing in cloud data engineering and analytics.",
     url: "https:///bhargav-portfolio.vercel.app",
     siteName: "Sai Bhargav Portfolio",
   },
