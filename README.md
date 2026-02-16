@@ -9,7 +9,7 @@ This repository contains my personal portfolio website built to showcase my work
 - Tailwind CSS
 
 ## Features
-- Modern, responsive UI
+- Modern, responsive UI.
 - Animated sections and transitions
 - Skills, projects, certifications, and education sections
 - Contact form with interactive UI
