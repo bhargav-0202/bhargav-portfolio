@@ -54,9 +54,9 @@ const featureCards: {
 ];
 
 const cardBase =
-  "rounded-xl border border-white/10 bg-[#1a1a2e]/90 backdrop-blur-sm transition-all duration-300 ease-out " +
-  "hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/10 hover:border-cyan-500/30 " +
-  "focus:outline-none focus-visible:-translate-y-1 focus-visible:scale-[1.02] focus-visible:shadow-lg focus-visible:shadow-cyan-500/10 focus-visible:border-cyan-500/30 focus-visible:ring-2 focus-visible:ring-cyan-400/50";
+  "rounded-xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-sm transition-all duration-300 ease-out " +
+  "hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20 dark:hover:shadow-cyan-500/10 hover:border-cyan-500/40 dark:hover:border-cyan-500/30 " +
+  "focus:outline-none focus-visible:-translate-y-1 focus-visible:scale-[1.02] focus-visible:shadow-lg focus-visible:shadow-cyan-500/20 dark:focus-visible:shadow-cyan-500/10 focus-visible:border-cyan-500/40 dark:focus-visible:border-cyan-500/30 focus-visible:ring-2 focus-visible:ring-cyan-500/50 dark:focus-visible:ring-cyan-400/50";
 
 export default function AboutMe() {
   return (
@@ -64,16 +64,11 @@ export default function AboutMe() {
       id="about"
       className="relative max-w-7xl mx-auto px-6 scroll-mt-24 overflow-hidden"
     >
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0a192f] via-[#0a192f] to-[#0d2137]" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl -z-10" />
-
       <header className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
-          About <span className="text-cyan-400">Me</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-2">
+          About <span className="text-cyan-600 dark:text-cyan-400">Me</span>
         </h2>
-        <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto">
+        <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base max-w-xl mx-auto">
           Crafting data-driven solutions & intelligent systems.
         </p>
       </header>
@@ -84,13 +79,13 @@ export default function AboutMe() {
           className={`${cardBase} p-6 md:p-8 flex flex-col order-1 lg:order-1`}
           tabIndex={0}
         >
-          <h3 className="text-cyan-400 font-semibold text-lg mb-4">
+          <h3 className="text-cyan-600 dark:text-cyan-400 font-semibold text-lg mb-4">
             Background
           </h3>
-          <div className="text-gray-300 text-sm md:text-base leading-relaxed space-y-3">
+          <div className="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed space-y-3">
             <p>
               I specialize in{" "}
-              <strong className="text-white">Data Engineering and Analytics</strong>
+              <strong className="text-black dark:text-white">Data Engineering and Analytics</strong>
               , with hands-on experience designing and building scalable batch and 
               streaming data pipelines, cloud-native data platforms, and analytics-ready 
               data systems that power business decisions. I enjoy working across the data lifecycle, 
@@ -98,7 +93,7 @@ export default function AboutMe() {
               </p>
               <p>
               I’m deeply interested in{" "}
-              <strong className="text-white">automation, AI agents, and GenAI-driven systems,</strong> 
+              <strong className="text-black dark:text-white">automation, AI agents, and GenAI-driven systems,</strong> 
               where I focus on connecting enterprise data with LLMs through reliable pipelines, 
               RAG architectures, and intelligent workflows. With a strong foundation in algorithms 
               and problem-solving, I approach complex data challenges with clean, efficient, 
@@ -106,7 +101,7 @@ export default function AboutMe() {
             </p>
             <p>
               My foundation in{" "}
-              <strong className="text-white">competitive programming</strong> and
+              <strong className="text-black dark:text-white">competitive programming</strong> and
               algorithms helps me tackle complex problems with clean, efficient
               solutions. I enjoy turning messy data into clear stories and
               reliable systems that scale.
@@ -122,13 +117,13 @@ export default function AboutMe() {
               className={`${cardBase} p-5 flex flex-col items-center text-center`}
               tabIndex={0}
             >
-              <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-3">
+              <div className="w-10 h-10 rounded-lg bg-cyan-500/20 dark:bg-cyan-500/10 flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-3">
                 <Icon className="w-5 h-5" />
               </div>
-              <h4 className="text-white font-semibold text-sm mb-2">
+              <h4 className="text-black dark:text-white font-semibold text-sm mb-2">
                 {title}
               </h4>
-              <p className="text-gray-400 text-xs leading-relaxed line-clamp-4">
+              <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed line-clamp-4">
                 {description}
               </p>
             </div>

@@ -121,7 +121,7 @@ const BRAND_COLORS: Record<string, string> = {
   JIRA: "#0052CC",
   Confluence: "#172B4D",
   Slack: "#4A154B",
-  "Google Docs": "#4285F4",
+  
 };
 
 function SkillCard({ name }: { name: string }) {
@@ -130,7 +130,7 @@ function SkillCard({ name }: { name: string }) {
 
   return (
     <div
-      className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-6 py-5 min-w-[120px] h-[100px] shrink-0 transition-all duration-300 hover:border-white/20 hover:bg-white/10"
+      className="flex flex-col items-center justify-center rounded-2xl border border-black/10 dark:border-white/20 bg-white/60 dark:bg-white/[0.07] backdrop-blur-sm dark:backdrop-blur-md px-6 py-5 min-w-[120px] h-[100px] shrink-0 transition-all duration-300 hover:border-black/20 hover:bg-white/80 dark:hover:border-cyan-400/40 dark:hover:bg-white/[0.12] dark:shadow-[0_0_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.08)] dark:hover:shadow-[0_0_28px_rgba(34,211,238,0.15),inset_0_1px_0_rgba(255,255,255,0.1)]"
       title={name}
     >
       {Icon ? (
@@ -141,13 +141,13 @@ function SkillCard({ name }: { name: string }) {
         />
       ) : (
         <span
-          className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white/80 text-sm font-bold mb-2"
+          className="w-9 h-9 rounded-full bg-black/10 dark:bg-white/10 flex items-center justify-center text-black/80 dark:text-white/80 text-sm font-bold mb-2"
           aria-hidden
         >
           {name.charAt(0)}
         </span>
       )}
-      <span className="text-white text-xs font-medium text-center leading-tight line-clamp-2">
+      <span className="text-black dark:text-white text-xs font-medium text-center leading-tight line-clamp-2">
         {name}
       </span>
     </div>
@@ -193,13 +193,11 @@ export default function SkillsSection() {
       id="skills"
       className="relative max-w-full mx-auto px-4 sm:px-6 scroll-mt-24 overflow-hidden"
     >
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0a192f] via-[#0a192f] to-[#0d2137]" />
-
       <header className="text-center mb-10 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-black dark:text-white">
           Technical Skills
         </h2>
-        <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto">
+        <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base max-w-xl mx-auto">
           Data engineering technologies and tools I use to build scalable data
           systems.
         </p>
