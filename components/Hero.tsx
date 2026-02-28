@@ -49,75 +49,72 @@ export default function Hero() {
       
   return (
     <section className="relative min-h-screen overflow-hidden flex flex-col">
-      {/* Dark base */}
-      <div className="absolute inset-0 bg-[#0a192f]" />
-
-      {/* Dot grid + lines (network feel) */}
+      {/* Dot grid + lines (network feel) - subtle on light aurora, visible in dark */}
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-30 dark:opacity-40"
         style={{
           backgroundImage: `
-            radial-gradient(circle at 1px 1px, rgba(0, 188, 212, 0.4) 1px, transparent 0)
+            radial-gradient(circle at 1px 1px, rgba(0, 188, 212, 0.35) 1px, transparent 0)
           `,
           backgroundSize: "32px 32px",
         }}
       />
       <div
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-15 dark:opacity-20"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,188,212,0.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,188,212,0.15) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(0,188,212,0.12) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,188,212,0.12) 1px, transparent 1px)`,
           backgroundSize: "48px 48px",
         }}
       />
 
-      {/* Glowing orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/15 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl" />
+      {/* Glowing orbs - subtle in light, a bit stronger in dark */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/15 dark:bg-cyan-500/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-violet-400/10 dark:bg-purple-500/15 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-cyan-400/10 dark:bg-cyan-400/15 rounded-full blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-6 flex-1 flex flex-col justify-center pt-24 pb-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left */}
           <div className="space-y-5">
-          <p className="text-white/80 text-xl sm:text-2xl font-medium tracking-wide
+          <p className="text-black/80 dark:text-white/80 text-xl sm:text-2xl font-medium tracking-wide
               transition-all duration-300
-              hover:text-cyan-400">
+              hover:text-cyan-600 dark:hover:text-cyan-400">
               Hi, I am
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black dark:text-white leading-tight">
               Sai {" "}
-              <span className="text-[#f5a623]">Bhargav</span>
+              <span className="text-[#d97706] dark:text-[#f5a623]">Bhargav</span>
             </h1>
 
             {/* Fixed-height container so only role text animates; content below stays static */}
             <div className="min-h-[2.75rem] flex items-center">
-              <p className="text-xl font-semibold text-cyan-400 flex items-center gap-1 min-w-0">
+              <p className="text-xl font-semibold text-cyan-600 dark:text-cyan-400 flex items-center gap-1 min-w-0">
                 <span className="tabular-nums truncate" aria-live="polite">
                   {displayText}
                 </span>
                 <span
-                  className="inline-block w-0.5 h-6 bg-cyan-400 ml-1 shrink-0 animate-pulse"
+                  className="inline-block w-0.5 h-6 bg-cyan-500 ml-1 shrink-0 animate-pulse"
                   aria-hidden
                 />
               </p>
             </div>
 
-            <p className="text-white/70 text-sm">Philadelphia, USA.</p>
+            <p className="text-black/70 dark:text-white/70 text-sm">Philadelphia, USA.</p>
 
-            <p className="text-gray-300 max-w-xl leading-relaxed text-lg">
+            <p className="text-gray-700 dark:text-gray-300 max-w-xl leading-relaxed text-lg">
             I work behind the scenes where data becomes power. Clean pipelines, 
             solid architecture, and systems that don’t break  --that’s my game.
 
             </p>
 
             {/* Socials */}
-            <div className="flex gap-4 text-white/80">
+            <div className="flex gap-4 text-black/80 dark:text-white/80">
               <a
                 href="https://www.linkedin.com/in/bhargav-c-89b0423a0cfs567/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-cyan-400 transition-colors"
+                className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
@@ -126,14 +123,14 @@ export default function Hero() {
                 href="https://github.com/bhargav-0202"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-cyan-400 transition-colors"
+                className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a
                 href="mailto:bhargavxm0214@gmail.com"
-                className="hover:text-cyan-400 transition-colors"
+                className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5" />
@@ -150,7 +147,7 @@ export default function Hero() {
               </Button>
               <Button
                 variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 rounded-md px-5 py-2.5 text-sm"
+                className="border-black/20 dark:border-white/30 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 rounded-md px-5 py-2.5 text-sm"
                 asChild
               >
                 
@@ -166,7 +163,7 @@ export default function Hero() {
             <div className="pt-10 flex justify-center w-full">
             <a
              href="#about"
-             className="text-white/60 hover:text-cyan-400 transition-colors"
+             className="text-black/60 dark:text-white/60 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
             aria-label="Scroll down"
               >
             <ChevronDown className="w-8 h-8 animate-bounce transition-transform hover:scale-110" />
@@ -176,7 +173,7 @@ export default function Hero() {
 
           {/* Right - Profile: circular frame; add profile-bg.png to public/ for splatter behind photo (shows when profile has transparent background) */}
           <div className="relative flex justify-center order-first md:order-last">
-            <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden border-2 border-white/10 shadow-2xl bg-white/5">
+            <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden border-2 border-black/10 dark:border-white/10 shadow-2xl bg-white/60 dark:bg-white/5">
               <div
                 className="absolute inset-0 bg-cover bg-center rounded-full"
                 style={{ backgroundImage: "url(/profile-bg.png)" }}

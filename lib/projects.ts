@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   image: string; // URL or CSS gradient
   githubUrl: string;
+  liveUrl?: string; // optional live demo URL
   tags?: string[];
 }
 
@@ -16,6 +17,7 @@ export const projects: Project[] = [
     image:
       "linear-gradient(135deg, #0f766e 0%, #134e4a 50%, #0c4a6e 100%)",
     githubUrl: "https://github.com",
+    liveUrl: "#",
     tags: ["PySpark", "dbt", "Airflow", "Databricks"],
   },
   {
@@ -26,6 +28,7 @@ export const projects: Project[] = [
     image:
       "linear-gradient(135deg, #1e3a5f 0%, #312e81 50%, #4c1d95 100%)",
     githubUrl: "https://github.com",
+    liveUrl: "#",
     tags: ["SQL", "PySpark", "Power BI"],
   },
   {
@@ -36,6 +39,7 @@ export const projects: Project[] = [
     image:
       "linear-gradient(135deg, #0c4a6e 0%, #075985 50%, #0369a1 100%)",
     githubUrl: "https://github.com",
+    liveUrl: "#",
     tags: ["Kafka", "Spark Streaming", "AWS", "GCP"],
   },
   {
