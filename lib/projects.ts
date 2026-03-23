@@ -10,36 +10,31 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "databricks-lake",
-    title: "Unified Azure Databricks Data Lake",
+    id: "disaster-intelligence",
+    title: "Real-Time Disaster Intelligence Platform",
     description:
-      "Cloud-native data lake processing 5 PB+ of data across sales, inventory, and finance for 10K+ daily users.",
-    image:
-      "linear-gradient(135deg, #0f766e 0%, #134e4a 50%, #0c4a6e 100%)",
-    githubUrl: "https://github.com",
-    liveUrl: "#",
-    tags: ["PySpark", "dbt", "Airflow", "Databricks"],
+      "This project ingests live earthquake data from the USGS (United States Geological Survey) API every 60 seconds, processes it through a Medallion Architecture (Bronze → Silver → Gold), applies machine learning for anomaly detection and severity classification, generates intelligent natural language summaries using GPT-4o, exports curated data to Snowflake, and visualizes insights on Power BI dashboards — all in real time.",
+    image: "/projects/disaster-intelligence-platform.png",
+    githubUrl: "https://github.com/bhargav-0202/Real-Time-Disaster-Intelligence-Platform",
+    tags: ["Azure", "Databricks", "Snowflake", "GPT-4o", "Power BI"],
   },
   {
-    id: "customer-360",
-    title: "Customer 360 Analytics Platform",
+    id: "ml-loan-risk-lending-club",
+    title: "ML Loan Risk Scoring Pipeline ~ LENDING CLUB",
     description:
-      "Analytical models for 35M+ customers using RFM segmentation to improve campaign targeting efficiency.",
-    image:
-      "linear-gradient(135deg, #1e3a5f 0%, #312e81 50%, #4c1d95 100%)",
-    githubUrl: "https://github.com",
-    liveUrl: "#",
-    tags: ["SQL", "PySpark", "Power BI"],
+      "PySpark and SQL-based data pipeline to compute loan risk scores using weighted financial factors, classifying loans into A–F grades to support risk mitigation, improve portfolio quality, and enable consistent, audit-ready lending decisions.",
+    image: "/projects/ml-loan-risk-lending-club.jpg",
+    githubUrl: "https://github.com/bhargav-0202",
+    tags: ["PySpark", "SQL", "Feature Engineering", "Lending Club", "Machine Learning"],
   },
   {
     id: "realtime-pipeline",
     title: "Real-Time Analytics Pipeline",
     description:
-      "Streaming pipelines with Kafka and Spark Streaming for near real-time operational KPIs.",
+      "Lambda architecture analytics platform processing real-time clickstream data using Kafka and PySpark Structured Streaming, with Airflow and dbt for batch transformations and Snowflake for warehousing, enabling reliable, analytics-ready insights.",
     image:
-      "linear-gradient(135deg, #0c4a6e 0%, #075985 50%, #0369a1 100%)",
+      "/projects/Project3.png",
     githubUrl: "https://github.com",
-    liveUrl: "#",
     tags: ["Kafka", "Spark Streaming", "AWS", "GCP"],
   },
   {

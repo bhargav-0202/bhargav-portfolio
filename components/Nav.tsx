@@ -6,7 +6,6 @@ import { SkyToggle } from "@/components/ui/sky-toggle";
 const navLinks = [
   "About",
   "Skills",
-  "Experience",
   "Projects",
   "Education",
   "Certifications",
