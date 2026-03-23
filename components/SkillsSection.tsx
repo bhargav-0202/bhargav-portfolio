@@ -82,6 +82,13 @@ const VERIFIED_ICON_MAP: Record<string, IconType> = {
   "Google Docs": SiGoogledocs,
 };
 
+/** Custom images for specific skills (use instead of react-icons) */
+const CUSTOM_IMAGE_MAP: Record<string, string> = {
+  "Identity and Access Management (IAM)": "/skills/iam.png",
+  "Power BI": "/skills/powerbi.png",
+  "Microsoft Azure": "/skills/azure.png",
+};
+
 /** Brand colors for icons (original / recognizable on dark background) */
 const BRAND_COLORS: Record<string, string> = {
   Python: "#3776AB",
@@ -125,6 +132,7 @@ const BRAND_COLORS: Record<string, string> = {
 };
 
 function SkillCard({ name }: { name: string }) {
+  const customImage = CUSTOM_IMAGE_MAP[name];
   const Icon = VERIFIED_ICON_MAP[name];
   const color = BRAND_COLORS[name] ?? "#94a3b8";
 
@@ -133,7 +141,14 @@ function SkillCard({ name }: { name: string }) {
       className="flex flex-col items-center justify-center rounded-2xl border border-black/10 dark:border-white/20 bg-white/60 dark:bg-white/[0.07] backdrop-blur-sm dark:backdrop-blur-md px-6 py-5 min-w-[120px] h-[100px] shrink-0 transition-all duration-300 hover:border-black/20 hover:bg-white/80 dark:hover:border-cyan-400/40 dark:hover:bg-white/[0.12] dark:shadow-[0_0_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.08)] dark:hover:shadow-[0_0_28px_rgba(34,211,238,0.15),inset_0_1px_0_rgba(255,255,255,0.1)]"
       title={name}
     >
-      {Icon ? (
+      {customImage ? (
+        <img
+          src={customImage}
+          alt=""
+          className="w-9 h-9 object-contain shrink-0 mb-2"
+          aria-hidden
+        />
+      ) : Icon ? (
         <Icon
           className="w-9 h-9 shrink-0 mb-2"
           style={{ color }}

@@ -28,19 +28,22 @@ export default function Portfolio() {
         {/* Skills */}
         <SkillsSection />
 
-        {/* Projects - exactly 3 cards, reference layout */}
-        {/*<section id="projects" className="max-w-7xl mx-auto px-6 scroll-mt-24">
-          <h2 className="text-2xl font-semibold text-black dark:text-white mb-10 text-center sm:text-left">
+        {/* Projects - three horizontal blocks, alternating image side */}
+        <section id="projects" className="max-w-7xl mx-auto px-6 scroll-mt-24">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-black dark:text-white mb-10 text-center sm:text-left">
             Projects
-            <span className="text-cyan-500 dark:text-cyan-400 align-middle ml-1.5 w-2 h-2 rounded-full bg-current inline-block" aria-hidden />
+            <span
+              className="text-cyan-500 dark:text-cyan-400 align-middle ml-1.5 w-2 h-2 rounded-full bg-current inline-block"
+              aria-hidden
+            />
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="space-y-10 lg:space-y-12">
             {projects.slice(0, 3).map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i + 1} />
             ))}
           </div>
-        </section>*/}
+        </section>
 
         {/* Certifications + Education */}
         <section className="max-w-7xl mx-auto px-6 scroll-mt-24">

@@ -100,7 +100,7 @@ export default function Hero() {
               </p>
             </div>
 
-            <p className="text-black/70 dark:text-white/70 text-sm">Philadelphia, USA.</p>
+            <p className="text-black/70 dark:text-white/70 text-sm">Texas, USA.</p>
 
             <p className="text-gray-700 dark:text-gray-300 max-w-xl leading-relaxed text-lg">
             I work behind the scenes where data becomes power. Clean pipelines, 
