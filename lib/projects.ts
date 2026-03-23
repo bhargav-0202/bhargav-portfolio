@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "Lambda architecture analytics platform processing real-time clickstream data using Kafka and PySpark Structured Streaming, with Airflow and dbt for batch transformations and Snowflake for warehousing, enabling reliable, analytics-ready insights.",
     image:
       "/projects/Project3.png",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/bhargav-0202/Real-Time-User-Behaviour-Analytics-Platform",
     tags: ["Kafka", "Spark Streaming", "AWS", "GCP"],
   },
   {
